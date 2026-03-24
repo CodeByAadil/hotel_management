@@ -421,7 +421,7 @@ CREATE TABLE `user_queries` (
   `email` varchar(150) NOT NULL,
   `subject` varchar(200) NOT NULL,
   `message` varchar(500) NOT NULL,
-  `date` date NOT NULL DEFAULT current_timestamp(),
+  `date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP(),
   `seen` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 

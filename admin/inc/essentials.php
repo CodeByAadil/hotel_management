@@ -2,7 +2,8 @@
 
     // frontend purposes data
 
-    define('SITE_URL', 'http://127.0.0.1/hotal_booking/');
+    $protocol = empty($_SERVER['HTTPS']) ? 'http' : 'https';
+    define('SITE_URL', $protocol . '://' . $_SERVER['HTTP_HOST'] . '/hotel_management/');
     define('ABOUT_IMG_PATH',SITE_URL.'Images/about/');
     define('CAROUSEL_IMG_PATH',SITE_URL.'Images/carousel/');
     define('FACILITIES_IMG_PATH',SITE_URL.'Images/facilities/');
@@ -12,7 +13,7 @@
 
     // backend upload process needs this data
 
-    define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hotel_booking/Images/');
+    define('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hotel_management/Images/');
     define('ABOUT_FOLDER','about/');
     define('CAROUSEL_FOLDER','carousel/');
     define('FACILITIES_FOLDER','facilities/');
